@@ -1,6 +1,6 @@
 const grid = document.querySelector (".gridContainer");
 const userInput = document.getElementById("quantity");
-const resectButton = document.querySelector(".resect");
+const resetButton = document.querySelector(".reset");
 
 createGrid = () => {
     for (let i = 0; i < 256; i++){
@@ -25,17 +25,17 @@ updateGrid = () => {
         div.classList.add("square");
         grid.appendChild(div);
     }
-    console.log(userInput.value) 
+    console.log(userInput.value);
 };
 
 const square = document.querySelector("div");
 square.addEventListener("mouseover", function(event) {
-    event.target.clasList.replace("square", "color");
+    event.target.classList.replace("square", "color");
 });
 
 userInput.addEventListener("change", updateGrid);
 
-resectButton.addEventListener("click", function() {
+resetButton.addEventListener("click", function() {
 grid.innerHTML = "";
 userInput.value = "";
 grid.style.setProperty("grid-template-columns", 'repeat(16, 2fr)');
