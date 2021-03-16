@@ -1,4 +1,4 @@
-const grid = window.document.querySelector(".gridContainer");
+const grid = document.querySelector(".gridContainer");
 // getting input node with id q
 const userInput = document.getElementById("quantity");
 const resetButton = document.querySelector(".reset");
